@@ -1,13 +1,16 @@
 const loginForm = document.querySelector('.login-form');
 const registerLink = document.querySelector('.register-link');
 const loginLink = document.querySelector('.login-link');
+const cat = document.querySelector('.cat-box');
 
 registerLink.onclick = () => {
   loginForm.classList.add('active');
+  cat.classList.add('active');
 };
 
 loginLink.onclick = () => {
   loginForm.classList.remove('active');
+  cat.classList.remove('active');
 };
 
 // Show/hide password

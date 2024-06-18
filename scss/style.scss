@@ -357,9 +357,9 @@ h2 {
     position: absolute;
     height: 6vmin;
     margin-top: -6vmin;
-    top: -1px;
-    right: 50%;
-    transform: translateX(50%);
+    // top: -1px;
+    // right: 50%;
+    // transform: translateX(50%);
     fill: #004b57;
   }
 
@@ -389,5 +389,57 @@ h2 {
 
   #catImage:hover #catEarRight {
     transform: rotate(22deg);
+  }
+}
+
+.cat-box {
+  #catImage {
+    top: -1px;
+    left: calc(90% - 118.42px);
+    animation: moveCatRight 1.5s 0.7s both;
+  }
+}
+
+.cat-box.active {
+  #catImage {
+    animation: moveCatLeft 1.5s 0.7s both;
+  }
+}
+
+@keyframes moveCatLeft {
+  0% {
+    top: -1px;
+    left: calc(90% - 118.42px);
+  }
+  25% {
+    top: 60px;
+    left: calc(90% - 118.42px);
+  }
+  50% {
+    top: 60px;
+    left: 10%;
+  }
+  100% {
+    top: -1px;
+    left: 10%;
+  }
+}
+
+@keyframes moveCatRight {
+  0% {
+    top: -1px;
+    left: 10%;
+  }
+  25% {
+    top: 60px;
+    left: 10%;
+  }
+  50% {
+    top: 60px;
+    left: calc(90% - 118.42px);
+  }
+  100% {
+    top: -1px;
+    left: calc(90% - 118.42px);
   }
 }
